@@ -1,0 +1,1 @@
+rootProject.name = "com.pro8l3m.ktor-fake-users"
