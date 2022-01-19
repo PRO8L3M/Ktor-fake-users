@@ -27,3 +27,10 @@ dependencies {
     testImplementation("io.ktor:ktor-server-tests:$ktor_version")
     testImplementation("org.jetbrains.kotlin:kotlin-test-junit:$kotlin_version")
 }
+
+tasks {
+    task("stage") {
+        dependsOn("build", "clean")
+        get("build").mustRunAfter("clean")
+    }
+}
