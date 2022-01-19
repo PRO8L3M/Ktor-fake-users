@@ -1,0 +1,1 @@
+web: build/install/com.pro8l3m.ktor-fake-users/bin/com.pro8l3m.ktor-fake-users

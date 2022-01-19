@@ -30,7 +30,6 @@ dependencies {
 
 tasks {
     task("stage") {
-        dependsOn("build", "clean")
-        get("build").mustRunAfter("clean")
+        dependsOn("installDist")
     }
 }
