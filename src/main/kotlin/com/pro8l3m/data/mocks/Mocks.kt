@@ -2,7 +2,7 @@ package com.pro8l3m.data.mocks
 
 import com.pro8l3m.data.model.User
 
-const val BASE_URL = "http://192.168.0.144:8080"
+const val BASE_URL = "https://peaceful-island-34483.herokuapp.com"
 
 object Mocks {
     val users = mutableListOf(
