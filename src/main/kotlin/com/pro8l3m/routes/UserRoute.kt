@@ -4,11 +4,21 @@ import com.pro8l3m.data.mocks.Mocks
 import com.pro8l3m.data.model.User
 import io.ktor.application.*
 import io.ktor.http.*
+import io.ktor.http.content.*
 import io.ktor.request.*
 import io.ktor.response.*
 import io.ktor.routing.*
+import java.io.File
 
 fun Route.users() {
+
+    get("/avatars") {
+        if (Mocks.avatars.isEmpty()) {
+            call.respondText("No avatars found", status = HttpStatusCode.NotFound)
+        } else {
+            call.respond(HttpStatusCode.OK, Mocks.avatars.values.toList())
+        }
+    }
 
     get("/users") {
         if (Mocks.users.isNotEmpty()) {
